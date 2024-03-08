@@ -11,7 +11,6 @@ const CountryInfo = ({country}) => {
             setCurrentTemp(object.current.temp_c);
             setCurrentWind(object.current.wind_kph);
             setCondition({text: object.current.condition.text, icon: object.current.condition.icon});
-            console.log(object.current.condition.icon);
         });
     }, [country])
 
