@@ -3,3 +3,6 @@
 
 # part2/prueba/
 # part3/prueba/
+.env
+/part3/prueba/node_modules
+/part3/phonebook/node_modules
