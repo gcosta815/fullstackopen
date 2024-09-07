@@ -69,7 +69,7 @@ const App = () => {
       personService
         .destroy(id)
         .then(response => { 
-            if (response.status == 200) {
+            if (response.status == 204) {
               setPersons(persons.filter(person => person.id != id));
               showMessage(`${personToDelete.name} deleted`, 'success');
             } 
