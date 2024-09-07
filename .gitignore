@@ -1,10 +1,7 @@
 
 .DS_Store
-
-# part2/prueba/
-# part3/prueba/
+part2/prueba/
+part3/prueba/
 .env
-/part2/prueba/dist
 /part2/phonebook/dist
-/part3/prueba/node_modules
 /part3/phonebook/node_modules
