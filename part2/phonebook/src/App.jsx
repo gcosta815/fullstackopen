@@ -45,6 +45,9 @@ const App = () => {
           { setPersons(persons.concat(person));
             showMessage(`Added ${person.name}`, 'success');
           })
+          .catch(error => {
+            showMessage(error.response.data.error, 'error');
+          })
     }
     else {
       if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)) {
@@ -55,8 +58,7 @@ const App = () => {
             showMessage(`${returnedPerson.name} updated`, 'success');
           })
           .catch(error => {
-            setPersons(persons.filter(person => person.id != findPerson.id));
-            showMessage(`Information of ${findPerson.name} has already been removed from the server`, 'error');
+            showMessage(error.response.data.error, 'error');
           })
       }
     }
