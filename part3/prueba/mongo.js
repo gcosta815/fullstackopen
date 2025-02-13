@@ -9,7 +9,7 @@ const password = process.argv[2]
 const url = `mongodb+srv://gcosta815:${password}@cluster0.hk3b4.mongodb.net/noteApp?retryWrites=true&w=majority&appName=Cluster0`
 mongoose.set('strictQuery',false)
 mongoose.connect(url).then(
-    () => console.log('Connected to MongoDB'),
+  () => console.log('Connected to MongoDB'),
 )
 
 const noteSchema = new mongoose.Schema({
@@ -24,14 +24,14 @@ const note = new Note({
   important: true,
 })
 
-note.save().then(result => {
+note.save().then(() => {
   console.log('note saved!')
   mongoose.connection.close()
 })
 
-// Note.find({important: false}).then(result => {
-//     result.forEach(note => {
-//       console.log(note)
-//     })
-//     mongoose.connection.close()
-//   })
+Note.find({ important: false }).then(result => {
+  result.forEach(note => {
+    console.log(note)
+  })
+  mongoose.connection.close()
+})
