@@ -5,3 +5,4 @@ part3/prueba/
 .env
 /part2/phonebook/dist
 /part3/phonebook/node_modules
+/part4/bloglist/node_modules
